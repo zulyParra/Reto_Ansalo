@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/images/tablero-de-dibujo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Reto Ansalo</title>
+</head>
+
+<body>
+    <div class="container-fluid" id="container">
+        <!-- Image and text  bg-light navbar-light  -->
+        <nav class="navbar navbar-light shadow fixed-top" id="nav">
+            <a class="navbar-brand " href="" id="navA">
+                <img src="assets/images/tablero-de-dibujo.svg" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy"> Reto Ánsalo
+            </a>
+        </nav>
+        <main>
+            <div class="row justify-content-center  p-5 pt-">
+                <form action="#" id="formTeclado" class="p-4">
+                    <div class="form-group row">
+                        <div class="col-md-2">
+                            <label for="letras" class="col-md-2 col-form-label ">Letras</label>
+                        </div>
+                        <div class="col-12 col-md-9 ml-4">
+                            <input type="text" class="form-control" name="letras" id="letras" disabled>
+                            <p id="lt"></p>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-2">
+                            <label for="numeros" class="col-md-2 col-form-label">Números</label>
+                        </div>
+                        <div class="col-12 col-md-9 ml-4">
+                            <input type="text" class="form-control" id="numeros" disabled>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="col-6"></div>
+                        <div class="col-6 custom-control custom-switch form-group z-margin">
+                            <input type="checkbox" class="custom-control-input" id="temaRetro">
+                            <label class="custom-control-label" for="temaRetro">Tema retro</label>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="col-6"></div>
+                        <div class="col-6 custom-control custom-switch form-group z-margin">
+                            <input type="checkbox" class="custom-control-input" id="temaOscuro">
+                            <label class="custom-control-label" for="temaOscuro">Tema oscuro</label>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-around mt-5">
+                        <button id="a1" type="submit" class="btn btn-primary rounded-circle p-3 z-width">A-1</button>
+                        <button id="b2" type="submit" class="btn btn-primary rounded-circle p-3 z-width">B-2</button>
+                        <button id="c3" type="submit" class="btn btn-primary rounded-circle p-3 z-width">C-3</button>
+                    </div>
+                    <div class="row justify-content-around mt-5">
+                        <button id="d4" type="submit" class="btn btn-primary rounded-circle p-3 z-width">D-4</button>
+                        <button id="e5" type="submit" class="btn btn-primary rounded-circle p-3 z-width">E-5</button>
+                        <button id="f6" type="submit" class="btn btn-primary rounded-circle p-3 z-width">F-6</button>
+                    </div>
+                    <div class="row justify-content-around mt-5">
+                        <button id="g7" type="submit" class="btn btn-primary rounded-circle p-3 z-width">G-7</button>
+                        <button id="h8" type="submit" class="btn btn-primary rounded-circle p-3 z-width">H-8</button>
+                        <button id="i9" type="submit" class="btn btn-primary rounded-circle p-3 z-width">I-9</button>
+                    </div>
+                    <div class="row justify-content-around mt-5 mb-5">
+                        <button id="calc" type="submit" class="btn btn-primary rounded-circle p-3 z-width">Calc</button>
+                        <button id="j0" type="submit" class="btn btn-primary rounded-circle p-3 z-width">J-0</button>
+                        <button id="reset" type="submit" class="btn btn-primary rounded-circle p-3 z-width">reset</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <footer class="mb-0 bg-primary text-white" id="footer">
+            <div class="d-flex justify-content-center align-items-center">
+                Copyrigth @ 2020 - Reto Ánsalo
+            </div>
+        </footer>
+    </div>
+
+    <!-- script -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
+    <script src="assets/js/index.js"></script>
+</body>
+
+</html>

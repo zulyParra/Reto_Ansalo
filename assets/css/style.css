@@ -1,0 +1,38 @@
+.z-margin {
+    margin-left: 210px;
+}
+
+.z-width {
+    width: 66px;
+}
+
+
+/*  para tema dark */
+
+.shadow2 {
+    box-shadow: 0 .5rem 1rem gray !important;
+}
+
+
+/* tema retro */
+
+.text-retro {
+    color: #72d7d3 !important;
+    font-family: 'Courgette', cursive;
+}
+
+.retro {
+    background-color: #f2eee3 !important;
+}
+
+.bt-retro {
+    color: #cef3f3 !important;
+    background-color: #72d7d3 !important;
+    border-color: #64c9c5 !important;
+}
+
+.bt-retro:hover {
+    color: #cef3f3 !important;
+    background-color: #44dad5 !important;
+    border-color: #3dcac6 !important;
+}
