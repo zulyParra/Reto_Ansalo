@@ -35,326 +35,158 @@ const G7 = document.getElementById('g7');
 const H8 = document.getElementById('h8');
 const I9 = document.getElementById('i9');
 const J0 = document.getElementById('j0');
+const calc = document.getElementById('calc');
+const reset = document.getElementById('reset');
 
 // Crear array con el contenido de los botones
 let arrayGeneral = [];
-
-// Llenar array
 arrayGeneral.push(a1, b2, c3, d4, e5, f6, g7, h8, i9, j0);
 
 // contador para validar las letras ya ingresadas
 let cont = 0;
 
-// contador para validar los números ya ingresados
-let contN = 0;
+// funciones
+function alertInicial() {
+    alert('Por favor ingrese los valores en orden');
+}
 
-// Añadiendo eventos al teclado
-// Letras
-A1.addEventListener('click', () => {
+function alertNoPermitido() {
+    alert('Este valor no es permitido porque ya fue ingresado');
+}
 
+function btnA1() {
     if (cont == 0) {
         letras.value = arrayGeneral[0][0];
+        numeros.value = arrayGeneral[0][1];
         cont++;
-    } else if (cont <= 1) {
-        alert('La letra ' + arrayGeneral[0][0] + ' ya fue ingresada, por favor ingrese la letra siguiente');
-    } else if (cont > 1) {
-        alert('Esta letra no es permitida porque ya fue ingresada')
+    } else if (cont >= 1) {
+        alertNoPermitido();
     }
+}
 
-
-});
-
-B2.addEventListener('click', () => {
-
+function btnB2() {
     if (cont < 1) {
-        alert('Por favor ingrese las letras en orden');
+        alertInicial();
     } else if (cont == 1) {
         letras.value += arrayGeneral[1][0];
+        numeros.value += arrayGeneral[1][1];
         cont++;
-    } else if (cont == 2) {
-        alert('La letra ' + arrayGeneral[1][0] + ' ya fue ingresada, por favor ingrese la letra siguiente')
-    } else if (cont > 2) {
-        alert('Esta letra no es permitida porque ya fue ingresada')
+    } else if (cont >= 2) {
+        alertNoPermitido();
     }
+}
 
-})
-
-C3.addEventListener('click', () => {
-
+function btnC3() {
     if (cont < 2) {
-        alert('Por favor ingrese las letras en orden');
+        alertInicial();
     } else if (cont == 2) {
         letras.value += arrayGeneral[2][0];
+        numeros.value += arrayGeneral[2][1];
         cont++;
-    } else if (cont == 3) {
-        alert('La letra ' + arrayGeneral[2][0] + ' ya fue ingresada, por favor ingrese la letra siguiente')
-    } else if (cont > 3) {
-        alert('Esta letra no es permitida porque ya fue ingresada')
+    } else if (cont >= 3) {
+        alertNoPermitido();
     }
+}
 
-})
-
-D4.addEventListener('click', () => {
-
+function btnD4() {
     if (cont < 3) {
-        alert('Por favor ingrese las letras en orden');
+        alertInicial();
     } else if (cont == 3) {
         letras.value += arrayGeneral[3][0];
+        numeros.value += arrayGeneral[3][1];
         cont++;
-    } else if (cont == 4) {
-        alert('La letra ' + arrayGeneral[3][0] + ' ya fue ingresada, por favor ingrese la letra siguiente')
-    } else if (cont > 4) {
-        alert('Esta letra no es permitida porque ya fue ingresada')
+    } else if (cont >= 4) {
+        alertNoPermitido();
     }
+}
 
-})
-E5.addEventListener('click', () => {
-
+function btnE5() {
     if (cont < 4) {
-        alert('Por favor ingrese las letras en orden');
+        alertInicial();
     } else if (cont == 4) {
         letras.value += arrayGeneral[4][0];
+        numeros.value += arrayGeneral[4][1];
         cont++;
-    } else if (cont == 5) {
-        alert('La letra ' + arrayGeneral[4][0] + ' ya fue ingresada, por favor ingrese la letra siguiente')
-    } else if (cont > 5) {
-        alert('Esta letra no es permitida porque ya fue ingresada')
+    } else if (cont >= 5) {
+        alertNoPermitido();
     }
+}
 
-})
-F6.addEventListener('click', () => {
-
+function btnF6() {
     if (cont < 5) {
-        alert('Por favor ingrese las letras en orden');
+        alertInicial();
     } else if (cont == 5) {
         letras.value += arrayGeneral[5][0];
+        numeros.value += arrayGeneral[5][1];
         cont++;
-    } else if (cont == 6) {
-        alert('La letra ' + arrayGeneral[5][0] + ' ya fue ingresada, por favor ingrese la letra siguiente')
-    } else if (cont > 6) {
-        alert('Esta letra no es permitida porque ya fue ingresada')
+    } else if (cont >= 6) {
+        alertNoPermitido();
     }
+}
 
-})
-
-G7.addEventListener('click', () => {
-
+function btnG7() {
     if (cont < 6) {
-        alert('Por favor ingrese las letras en orden');
+        alertInicial();
     } else if (cont == 6) {
         letras.value += arrayGeneral[6][0];
+        numeros.value += arrayGeneral[6][1];
         cont++;
-    } else if (cont == 7) {
-        alert('La letra ' + arrayGeneral[6][0] + ' ya fue ingresada, por favor ingrese la letra siguiente')
-    } else if (cont > 7) {
-        alert('Esta letra no es permitida porque ya fue ingresada')
+    } else if (cont >= 7) {
+        alertNoPermitido();
     }
+}
 
-})
-H8.addEventListener('click', () => {
-
+function btnH8() {
     if (cont < 7) {
-        alert('Por favor ingrese las letras en orden');
+        alertInicial();
     } else if (cont == 7) {
         letras.value += arrayGeneral[7][0];
+        numeros.value += arrayGeneral[7][1];
         cont++;
-    } else if (cont == 8) {
-        alert('La letra ' + arrayGeneral[7][0] + ' ya fue ingresada, por favor ingrese la letra siguiente')
-    } else if (cont > 8) {
-        alert('Esta letra no es permitida porque ya fue ingresada')
+    } else if (cont >= 8) {
+        alertNoPermitido();
     }
-})
-I9.addEventListener('click', () => {
+}
 
+function btnI9() {
     if (cont < 8) {
-        alert('Por favor ingrese las letras en orden');
+        alertInicial();
     } else if (cont == 8) {
         letras.value += arrayGeneral[8][0];
+        numeros.value += arrayGeneral[8][1];
         cont++;
-    } else if (cont == 9) {
-        alert('La letra ' + arrayGeneral[8][0] + ' ya fue ingresada, por favor ingrese la letra siguiente')
-    } else if (cont > 9) {
-        alert('Esta letra no es permitida porque ya fue ingresada')
+    } else if (cont >= 9) {
+        alertNoPermitido();
     }
+}
 
-})
-
-J0.addEventListener('click', () => {
-
+function btnJ0() {
     if (cont < 9) {
-        alert('Por favor ingrese las letras en orden');
+        alertInicial();
     } else if (cont == 9) {
         letras.value += arrayGeneral[9][0];
+        numeros.value += arrayGeneral[9][1];
         cont++;
-    } else if (cont == 10) {
-        alert('La letra ' + arrayGeneral[9][0] + ' ya fue ingresada, por favor ingrese la letra siguiente')
-    } else if (cont > 10) {
-        alert('Esta letra no es permitida porque ya fue ingresada')
+    } else if (cont >= 10) {
+        alertNoPermitido();
     }
+}
 
-})
-
-// Números
-A1.addEventListener('click', () => {
-
-    if (cont == 0) {
-        numeros.value = arrayGeneral[0][0];
-        cont++;
-    } else if (cont <= 1) {
-        alert('La letra ' + arrayGeneral[0][0] + ' ya fue ingresada, por favor ingrese la letra siguiente');
-    } else if (cont > 1) {
-        alert('Esta letra no es permitida porque ya fue ingresada')
-    }
-
-
-});
-
-B2.addEventListener('click', () => {
-
-    if (cont < 1) {
-        alert('Por favor ingrese las letras en orden');
-    } else if (cont == 1) {
-        numeros.value += arrayGeneral[1][0];
-        cont++;
-    } else if (cont == 2) {
-        alert('La letra ' + arrayGeneral[1][0] + ' ya fue ingresada, por favor ingrese la letra siguiente')
-    } else if (cont > 2) {
-        alert('Esta letra no es permitida porque ya fue ingresada')
-    }
-
-})
-
-C3.addEventListener('click', () => {
-
-    if (cont < 2) {
-        alert('Por favor ingrese las letras en orden');
-    } else if (cont == 2) {
-        numeros.value += arrayGeneral[2][0];
-        cont++;
-    } else if (cont == 3) {
-        alert('La letra ' + arrayGeneral[2][0] + ' ya fue ingresada, por favor ingrese la letra siguiente')
-    } else if (cont > 3) {
-        alert('Esta letra no es permitida porque ya fue ingresada')
-    }
-
-})
-
-D4.addEventListener('click', () => {
-
-    if (cont < 3) {
-        alert('Por favor ingrese las letras en orden');
-    } else if (cont == 3) {
-        numeros.value += arrayGeneral[3][0];
-        cont++;
-    } else if (cont == 4) {
-        alert('La letra ' + arrayGeneral[3][0] + ' ya fue ingresada, por favor ingrese la letra siguiente')
-    } else if (cont > 4) {
-        alert('Esta letra no es permitida porque ya fue ingresada')
-    }
-
-})
-E5.addEventListener('click', () => {
-
-    if (cont < 4) {
-        alert('Por favor ingrese las letras en orden');
-    } else if (cont == 4) {
-        numeros.value += arrayGeneral[4][0];
-        cont++;
-    } else if (cont == 5) {
-        alert('La letra ' + arrayGeneral[4][0] + ' ya fue ingresada, por favor ingrese la letra siguiente')
-    } else if (cont > 5) {
-        alert('Esta letra no es permitida porque ya fue ingresada')
-    }
-
-})
-F6.addEventListener('click', () => {
-
-    if (cont < 5) {
-        alert('Por favor ingrese las letras en orden');
-    } else if (cont == 5) {
-        numeros.value += arrayGeneral[5][0];
-        cont++;
-    } else if (cont == 6) {
-        alert('La letra ' + arrayGeneral[5][0] + ' ya fue ingresada, por favor ingrese la letra siguiente')
-    } else if (cont > 6) {
-        alert('Esta letra no es permitida porque ya fue ingresada')
-    }
-
-})
-
-G7.addEventListener('click', () => {
-
-    if (cont < 6) {
-        alert('Por favor ingrese las letras en orden');
-    } else if (cont == 6) {
-        numeros.value += arrayGeneral[6][0];
-        cont++;
-    } else if (cont == 7) {
-        alert('La letra ' + arrayGeneral[6][0] + ' ya fue ingresada, por favor ingrese la letra siguiente')
-    } else if (cont > 7) {
-        alert('Esta letra no es permitida porque ya fue ingresada')
-    }
-
-})
-H8.addEventListener('click', () => {
-
-    if (cont < 7) {
-        alert('Por favor ingrese las letras en orden');
-    } else if (cont == 7) {
-        numeros.value += arrayGeneral[7][0];
-        cont++;
-    } else if (cont == 8) {
-        alert('La letra ' + arrayGeneral[7][0] + ' ya fue ingresada, por favor ingrese la letra siguiente')
-    } else if (cont > 8) {
-        alert('Esta letra no es permitida porque ya fue ingresada')
-    }
-})
-I9.addEventListener('click', () => {
-
-    if (cont < 8) {
-        alert('Por favor ingrese las letras en orden');
-    } else if (cont == 8) {
-        numeros.value += arrayGeneral[8][0];
-        cont++;
-    } else if (cont == 9) {
-        alert('La letra ' + arrayGeneral[8][0] + ' ya fue ingresada, por favor ingrese la letra siguiente')
-    } else if (cont > 9) {
-        alert('Esta letra no es permitida porque ya fue ingresada')
-    }
-
-})
-
-J0.addEventListener('click', () => {
-
-        if (cont < 9) {
-            alert('Por favor ingrese las letras en orden');
-        } else if (cont == 9) {
-            numeros.value += arrayGeneral[9][0];
-            cont++;
-        } else if (cont == 10) {
-            alert('La letra ' + arrayGeneral[9][0] + ' ya fue ingresada, por favor ingrese la letra siguiente')
-        } else if (cont > 10) {
-            alert('Esta letra no es permitida porque ya fue ingresada')
-        }
-
-    })
-    // cambia a tema oscuro
-
-temaOscuro.addEventListener('click', () => {
+function colocarTemaOscuro() {
     container.classList.remove('retro');
     container.classList.remove('text-retro');
     navA.classList.remove('text-retro');
-    a1.classList.remove('bt-retro');
-    b2.classList.remove('bt-retro');
-    c3.classList.remove('bt-retro');
-    d4.classList.remove('bt-retro');
-    e5.classList.remove('bt-retro');
-    f6.classList.remove('bt-retro');
-    g7.classList.remove('bt-retro');
-    h8.classList.remove('bt-retro');
-    i9.classList.remove('bt-retro');
+    A1.classList.remove('bt-retro');
+    B2.classList.remove('bt-retro');
+    C3.classList.remove('bt-retro');
+    D4.classList.remove('bt-retro');
+    E5.classList.remove('bt-retro');
+    F6.classList.remove('bt-retro');
+    G7.classList.remove('bt-retro');
+    H8.classList.remove('bt-retro');
+    I9.classList.remove('bt-retro');
     calc.classList.remove('bt-retro');
-    j0.classList.remove('bt-retro');
+    J0.classList.remove('bt-retro');
     reset.classList.remove('bt-retro');
     footer.classList.remove('bt-retro');
 
@@ -364,62 +196,85 @@ temaOscuro.addEventListener('click', () => {
     nav.classList.add('navbar-dark');
 
     localStorage.setItem('tema', 'temaOscuro');
-})
+}
 
-
-// cambia a tema retro
-temaRetro.addEventListener('click', () => {
+function colocarTemaRetro() {
     container.classList.remove('bg-dark');
     container.classList.remove('text-white');
     nav.classList.remove('shadow2');
     nav.classList.remove('navbar-dark');
 
-
     container.classList.add('retro');
     container.classList.add('text-retro');
     navA.classList.add('text-retro');
-    a1.classList.add('bt-retro');
-    b2.classList.add('bt-retro');
-    c3.classList.add('bt-retro');
-    d4.classList.add('bt-retro');
-    e5.classList.add('bt-retro');
-    f6.classList.add('bt-retro');
-    g7.classList.add('bt-retro');
-    h8.classList.add('bt-retro');
-    i9.classList.add('bt-retro');
+    A1.classList.add('bt-retro');
+    B2.classList.add('bt-retro');
+    C3.classList.add('bt-retro');
+    D4.classList.add('bt-retro');
+    E5.classList.add('bt-retro');
+    F6.classList.add('bt-retro');
+    G7.classList.add('bt-retro');
+    H8.classList.add('bt-retro');
+    I9.classList.add('bt-retro');
     calc.classList.add('bt-retro');
-    j0.classList.add('bt-retro');
+    J0.classList.add('bt-retro');
     reset.classList.add('bt-retro');
     footer.classList.add('bt-retro');
 
     localStorage.setItem('tema', 'temaRetro');
-})
+}
 
 const temaEnStorage = () => {
     const temaGuardado = localStorage.getItem('tema');
-    // console.log(temaGuardado);
     if (temaGuardado == 'temaOscuro') {
-        container.classList.add('bg-dark');
-        container.classList.add('text-white');
-        nav.classList.add('shadow2');
-        nav.classList.add('navbar-dark');
+        colocarTemaOscuro();
     } else if (temaGuardado == 'temaRetro') {
-        container.classList.add('retro');
-        container.classList.add('text-retro');
-        navA.classList.add('text-retro');
-        a1.classList.add('bt-retro');
-        b2.classList.add('bt-retro');
-        c3.classList.add('bt-retro');
-        d4.classList.add('bt-retro');
-        e5.classList.add('bt-retro');
-        f6.classList.add('bt-retro');
-        g7.classList.add('bt-retro');
-        h8.classList.add('bt-retro');
-        i9.classList.add('bt-retro');
-        calc.classList.add('bt-retro');
-        j0.classList.add('bt-retro');
-        reset.classList.add('bt-retro');
-        footer.classList.add('bt-retro');
+        colocarTemaRetro();
     }
 }
+
+// onClick
+
+A1.onclick = function() {
+    btnA1();
+}
+
+B2.onclick = function() {
+    btnB2();
+}
+
+C3.onclick = function() {
+    btnC3();
+}
+
+D4.onclick = function() {
+    btnD4();
+}
+E5.onclick = function() {
+    btnE5();
+}
+F6.onclick = function() {
+    btnF6();
+}
+G7.onclick = function() {
+    btnG7();
+}
+H8.onclick = function() {
+    btnH8();
+}
+I9.onclick = function() {
+    btnI9();
+}
+J0.onclick = function() {
+    btnJ0();
+}
+
+temaOscuro.onclick = function() {
+    colocarTemaOscuro();
+}
+
+temaRetro.onclick = function() {
+    colocarTemaRetro();
+}
+
 temaEnStorage();
