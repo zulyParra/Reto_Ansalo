@@ -3,8 +3,8 @@ let letras = document.getElementById('letras');
 let numeros = document.getElementById('numeros');
 
 // traer los botones switchs para cambiar tema
-const temaOscuro = document.getElementById('temaOscuro');
-const temaRetro = document.getElementById('temaRetro');
+let temaOscuro = document.getElementById('temaOscuro');
+let temaRetro = document.getElementById('temaRetro');
 
 // traer elementos html para cambiar styles
 const container = document.getElementById('container');
@@ -173,23 +173,6 @@ function btnJ0() {
 }
 
 function colocarTemaOscuro() {
-    container.classList.remove('retro');
-    container.classList.remove('text-retro');
-    navA.classList.remove('text-retro');
-    A1.classList.remove('bt-retro');
-    B2.classList.remove('bt-retro');
-    C3.classList.remove('bt-retro');
-    D4.classList.remove('bt-retro');
-    E5.classList.remove('bt-retro');
-    F6.classList.remove('bt-retro');
-    G7.classList.remove('bt-retro');
-    H8.classList.remove('bt-retro');
-    I9.classList.remove('bt-retro');
-    calc.classList.remove('bt-retro');
-    J0.classList.remove('bt-retro');
-    reset.classList.remove('bt-retro');
-    footer.classList.remove('bt-retro');
-
     container.classList.add('bg-dark');
     container.classList.add('text-white');
     nav.classList.add('shadow2');
@@ -198,12 +181,16 @@ function colocarTemaOscuro() {
     localStorage.setItem('tema', 'temaOscuro');
 }
 
-function colocarTemaRetro() {
+function removerTemaOscuro() {
     container.classList.remove('bg-dark');
     container.classList.remove('text-white');
     nav.classList.remove('shadow2');
     nav.classList.remove('navbar-dark');
 
+    localStorage.removeItem('tema');
+}
+
+function colocarTemaRetro() {
     container.classList.add('retro');
     container.classList.add('text-retro');
     navA.classList.add('text-retro');
@@ -224,6 +211,27 @@ function colocarTemaRetro() {
     localStorage.setItem('tema', 'temaRetro');
 }
 
+function removerTemaRetro() {
+    container.classList.remove('retro');
+    container.classList.remove('text-retro');
+    navA.classList.remove('text-retro');
+    A1.classList.remove('bt-retro');
+    B2.classList.remove('bt-retro');
+    C3.classList.remove('bt-retro');
+    D4.classList.remove('bt-retro');
+    E5.classList.remove('bt-retro');
+    F6.classList.remove('bt-retro');
+    G7.classList.remove('bt-retro');
+    H8.classList.remove('bt-retro');
+    I9.classList.remove('bt-retro');
+    calc.classList.remove('bt-retro');
+    J0.classList.remove('bt-retro');
+    reset.classList.remove('bt-retro');
+    footer.classList.remove('bt-retro');
+
+    localStorage.removeItem('tema');
+}
+
 const temaEnStorage = () => {
     const temaGuardado = localStorage.getItem('tema');
     if (temaGuardado == 'temaOscuro') {
@@ -233,48 +241,59 @@ const temaEnStorage = () => {
     }
 }
 
+temaOscuro.onclick = function () {
+    if (temaOscuro.checked == true) {
+        temaRetro.checked = false;
+        removerTemaRetro();
+        colocarTemaOscuro();
+    } else if (temaOscuro.checked == false) {
+        removerTemaOscuro();
+    }
+}
+
+temaRetro.onclick = function () {
+    if (temaRetro.checked == true) {
+        temaOscuro.checked = false;
+        removerTemaOscuro();
+        colocarTemaRetro();
+    } else if (temaRetro.checked == false) {
+        removerTemaRetro();
+    }
+}
 // onClick
 
-A1.onclick = function() {
+A1.onclick = function () {
     btnA1();
 }
 
-B2.onclick = function() {
+B2.onclick = function () {
     btnB2();
 }
 
-C3.onclick = function() {
+C3.onclick = function () {
     btnC3();
 }
 
-D4.onclick = function() {
+D4.onclick = function () {
     btnD4();
 }
-E5.onclick = function() {
+E5.onclick = function () {
     btnE5();
 }
-F6.onclick = function() {
+F6.onclick = function () {
     btnF6();
 }
-G7.onclick = function() {
+G7.onclick = function () {
     btnG7();
 }
-H8.onclick = function() {
+H8.onclick = function () {
     btnH8();
 }
-I9.onclick = function() {
+I9.onclick = function () {
     btnI9();
 }
-J0.onclick = function() {
+J0.onclick = function () {
     btnJ0();
-}
-
-temaOscuro.onclick = function() {
-    colocarTemaOscuro();
-}
-
-temaRetro.onclick = function() {
-    colocarTemaRetro();
 }
 
 temaEnStorage();

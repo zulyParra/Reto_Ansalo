@@ -83,7 +83,27 @@
             </div>
         </footer>
     </div>
-
+    <form name="miFormulario" action="mailto:promocion@guiarte.com" enctype="text/plain"> 
+        <input type="checkbox" name="miCheck"> 
+        <br> 
+        <br> 
+        <input type="button" value="informa de su propiedad checked" onclick="alertaChecked()"> 
+        <input type="button" value="informa de su propiedad value" onclick="alertaValue()"> 
+        <br> 
+        <br> 
+        <input type="button" value="Simula un click" onclick="metodoClick()"> 
+        </form> 
+        <script> 
+            function alertaChecked(){ 
+    alert(document.miFormulario.miCheck.checked) 
+} 
+function alertaValue(){ 
+    alert(document.miFormulario.miCheck.value) 
+} 
+function metodoClick(){ 
+    document.miFormulario.miCheck.click() 
+} 
+        </script>
     <!-- script -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
@@ -94,4 +114,4 @@
     <script src="assets/js/index.js"></script>
 </body>
 
-</html>
+</html>lo
